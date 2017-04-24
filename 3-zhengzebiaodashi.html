@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	/*
+		^表示开头
+		$表示结尾
+		[]表示范围
+		{}表示位数
+		+ {1,}  一位或多位
+		? {0,1} 一位或零位
+		* {0,}  零位或多位
+		() 分组
+		|或
+		\d [0-9]表示一位数字
+		\w [0-9a-zA-Z_] 表示一位数字字母下划线
+		\ 转移符
+	*/
+
+	// var reg = /^[0-9]{11}[0-57-8A-Za-w]$/;
+
+	var reg = /^\w{6,12}\@(qq|163|sina|126).com$/
+
+	var userstr = "aasas_123@google.com";
+
+	var result = reg.exec(userstr);
+
+	console.log(result);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var cat = {
+			name:"喵喵",
+			age:2,
+			sayName:function(){
+				console.log(this.name);
+				return this;
+			},
+			sayAge:function(){
+				console.log(this.age);
+			}
+		}
+
+		cat.sayName().sayAge();
+	</script>
+</body>
+</html>

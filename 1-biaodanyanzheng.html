@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.red{
+			color:red;
+		}
+		.green{
+			color:green;
+		}
+	</style>
+</head>
+<body>
+	<input type="text">
+	<span></span>
+	<script>
+		var input = document.querySelector('input');
+		var span = document.querySelector('span');
+
+		input.onblur = function(){
+			var val = this.value;
+			var reg = /^\w{6,12}\@(qq|163|sina|126).com$/;
+			var result = reg.test(val);
+			if(result){
+				span.innerHTML = "验证通过";
+				span.className = "green";
+			}else{
+				span.innerHTML = "验证失败";
+				span.className = "red";
+			}
+		}
+	</script>
+</body>
+</html>
